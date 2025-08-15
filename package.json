@@ -1,0 +1,38 @@
+{
+  "name": "chargeflow-shopper",
+  "version": "1.0.0",
+  "description": "NestJS microservices e-commerce platform",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
+  "scripts": {
+    "build": "nx build",
+    "test": "nx test",
+    "lint": "nx lint",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:web-server\" \"npm run dev:invoice\" \"npm run dev:billing\" \"npm run dev:shipping\" \"npm run dev:email\"",
+    "dev:frontend": "cd apps/frontend && npm run start:dev",
+    "dev:web-server": "cd apps/web-server && npm run start:dev",
+    "dev:invoice": "cd apps/invoice-service && npm run start:dev",
+    "dev:billing": "cd apps/billing-service && npm run start:dev",
+    "dev:shipping": "cd apps/shipping-service && npm run start:dev",
+    "dev:email": "cd apps/email-service && npm run start:dev",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "deploy:lambda": "npm run build && serverless deploy"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.0.0",
+    "@nestjs/testing": "^10.0.0",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "concurrently": "^8.0.0",
+    "jest": "^29.5.0",
+    "nx": "^16.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
