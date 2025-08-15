@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany } from 'typeorm';
 import { RequestItem } from './request-item.entity';
-import { RequestStatus } from '@chargeflow/shared';
+import { RequestStatus } from '@shopflow/shared';
 
 @Entity('requests')
 export class Request {

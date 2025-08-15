@@ -18,7 +18,7 @@ async function bootstrap() {
   app.use(
     session({
       store: new RedisStore({ client: redisClient }),
-      secret: process.env.SESSION_SECRET || 'chargeflow-secret',
+      secret: process.env.SESSION_SECRET || 'shopflow-secret',
       resave: false,
       saveUninitialized: false,
       cookie: {

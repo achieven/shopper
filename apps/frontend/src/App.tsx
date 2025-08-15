@@ -86,7 +86,7 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      <h1>ChargeFlow Shopper</h1>
+      <h1>ShopFlow Shopper</h1>
       
       {message && (
         <div className={`status ${message.type}`}>

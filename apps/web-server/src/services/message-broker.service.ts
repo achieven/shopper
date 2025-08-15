@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { SQS } from 'aws-sdk';
-import { Event, EventType, SQS_CONFIG, AWS_CONFIG, RequestStatus } from '@chargeflow/shared';
+import { Event, EventType, SQS_CONFIG, AWS_CONFIG, RequestStatus } from '@shopflow/shared';
 
 @Injectable()
 export class MessageBrokerService {

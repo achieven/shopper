@@ -7,8 +7,8 @@ import { RequestItem } from './entities/request-item.entity';
 import { User } from './entities/user.entity';
 import { Product } from './entities/product.entity';
 import { Invoice } from './entities/invoice.entity';
-import { EventType } from '@chargeflow/shared';
-import { EMAIL_CONFIG } from '@chargeflow/shared';
+import { EventType } from '@shopflow/shared';
+import { EMAIL_CONFIG } from '@shopflow/shared';
 import { EmailTemplateService, EmailData } from './email-template.service';
 
 @Injectable()

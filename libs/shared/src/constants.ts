@@ -19,7 +19,7 @@ export const AWS_CONFIG = {
 };
 
 export const SQS_CONFIG = {
-  queueUrl: process.env.SQS_QUEUE_URL || 'http://localhost:4566/000000000000/chargeflow-events',
+  queueUrl: process.env.SQS_QUEUE_URL || 'http://localhost:4566/000000000000/shopflow-events',
   region: process.env.AWS_REGION || 'us-east-1',
 };
 
@@ -29,7 +29,7 @@ export const STRIPE_CONFIG = {
 };
 
 export const EMAIL_CONFIG = {
-  from: process.env.EMAIL_FROM || 'noreply@chargeflow.com',
+  from: process.env.EMAIL_FROM || 'noreply@shopflow.com',
   smtp: {
     host: process.env.SMTP_HOST || 'smtp.gmail.com',
     port: parseInt(process.env.SMTP_PORT || '587'),

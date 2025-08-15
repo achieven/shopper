@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import Stripe from 'stripe';
-import { STRIPE_CONFIG } from '@chargeflow/shared';
+import { STRIPE_CONFIG } from '@shopflow/shared';
 
 @Injectable()
 export class StripeService {

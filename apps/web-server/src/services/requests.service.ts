@@ -5,7 +5,7 @@ import { Request } from '../entities/request.entity';
 import { RequestItem } from '../entities/request-item.entity';
 import { OutboxMessage } from '../entities/outbox-message.entity';
 import { Product } from '../entities/product.entity';
-import { CreateRequestDto, EventType, RequestStatus } from '@chargeflow/shared';
+import { CreateRequestDto, EventType, RequestStatus } from '@shopflow/shared';
 import { MessageBrokerService } from './message-broker.service';
 
 @Injectable()

@@ -9,7 +9,7 @@ import { RequestItem } from './entities/request-item.entity';
 import { User } from './entities/user.entity';
 import { Product } from './entities/product.entity';
 import { Invoice } from './entities/invoice.entity';
-import { DATABASE_CONFIG } from '@chargeflow/shared';
+import { DATABASE_CONFIG } from '@shopflow/shared';
 
 @Module({
   imports: [

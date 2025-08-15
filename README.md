@@ -1,4 +1,4 @@
-# ChargeFlow Shopper - Microservices Architecture
+# ShopFlow Shopper - Microservices Architecture
 
 A comprehensive e-commerce microservices platform built with NestJS, featuring event-driven architecture, transactional outbox pattern, and AWS SQS message broker.
 
@@ -45,7 +45,7 @@ Frontend → Web Server → SQS → Invoice Service → SQS → Billing Service 
 
 ```bash
 git clone <repository-url>
-cd chargeflow-shopper
+cd shopflow-shopper
 npm install
 ```
 
@@ -83,7 +83,7 @@ This will start:
 ## 📁 Project Structure
 
 ```
-chargeflow-shopper/
+shopflow-shopper/
 ├── apps/
 │   ├── frontend/                 # React frontend application
 │   ├── web-server/              # API gateway with session management
@@ -123,14 +123,14 @@ AWS_SECRET_ACCESS_KEY=test
 AWS_ENDPOINT=http://localhost:4566
 
 # SQS
-SQS_QUEUE_URL=http://localhost:4566/000000000000/chargeflow-events
+SQS_QUEUE_URL=http://localhost:4566/000000000000/shopflow-events
 
 # Stripe (for testing)
 STRIPE_SECRET_KEY=sk_test_...
 STRIPE_PUBLISHABLE_KEY=pk_test_...
 
 # Email
-EMAIL_FROM=noreply@chargeflow.com
+EMAIL_FROM=noreply@shopflow.com
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_SECURE=false

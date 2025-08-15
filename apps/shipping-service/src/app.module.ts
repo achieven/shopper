@@ -8,7 +8,7 @@ import { Request } from './entities/request.entity';
 import { RequestItem } from './entities/request-item.entity';
 import { User } from './entities/user.entity';
 import { OutboxMessage } from './entities/outbox-message.entity';
-import { DATABASE_CONFIG } from '@chargeflow/shared';
+import { DATABASE_CONFIG } from '@shopflow/shared';
 
 @Module({
   imports: [

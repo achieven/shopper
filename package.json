@@ -1,5 +1,5 @@
 {
-  "name": "chargeflow-shopper",
+  "name": "shopflow-shopper",
   "version": "1.0.0",
   "description": "NestJS microservices e-commerce platform",
   "private": true,

@@ -1,6 +1,6 @@
 import { Controller, Post, Body } from '@nestjs/common';
 import { RequestsService } from '../services/requests.service';
-import { CreateRequestDto } from '@chargeflow/shared';
+import { CreateRequestDto } from '@shopflow/shared';
 
 @Controller('api/requests')
 export class RequestsController {

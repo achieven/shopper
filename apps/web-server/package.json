@@ -1,7 +1,7 @@
 {
-  "name": "@chargeflow/web-server",
+  "name": "@shopflow/web-server",
   "version": "1.0.0",
-  "description": "Web server microservice for ChargeFlow Shopper",
+  "description": "Web server microservice for ShopFlow Shopper",
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -22,7 +22,7 @@
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/config": "^3.0.0",
     "@nestjs/typeorm": "^10.0.0",
-    "@chargeflow/shared": "1.0.0",
+    "@shopflow/shared": "1.0.0",
     "typeorm": "^0.3.17",
     "pg": "^8.11.0",
     "redis": "^4.6.0",

@@ -10,7 +10,7 @@ import { Product } from './entities/product.entity';
 import { Request } from './entities/request.entity';
 import { RequestItem } from './entities/request-item.entity';
 import { OutboxMessage } from './entities/outbox-message.entity';
-import { DATABASE_CONFIG } from '@chargeflow/shared';
+import { DATABASE_CONFIG } from '@shopflow/shared';
 
 @Module({
   imports: [

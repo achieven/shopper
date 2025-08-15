@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🚀 Setting up ChargeFlow Shopper Microservices..."
+echo "🚀 Setting up ShopFlow Shopper Microservices..."
 
 # Check if Node.js is installed
 if ! command -v node &> /dev/null; then
@@ -72,11 +72,11 @@ sleep 10
 
 # Create SQS queue (if using LocalStack)
 echo "📬 Setting up SQS queue..."
-aws --endpoint-url=http://localhost:4566 sqs create-queue --queue-name chargeflow-events --region us-east-1 || echo "Queue might already exist"
+aws --endpoint-url=http://localhost:4566 sqs create-queue --queue-name shopflow-events --region us-east-1 || echo "Queue might already exist"
 
 echo "✅ Setup complete!"
 echo ""
-echo "🎉 ChargeFlow Shopper is ready to run!"
+echo "🎉 ShopFlow Shopper is ready to run!"
 echo ""
 echo "To start all services:"
 echo "  npm run dev"

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as Handlebars from 'handlebars';
-import { EMAIL_CONFIG } from '@chargeflow/shared';
+import { EMAIL_CONFIG } from '@shopflow/shared';
 
 export interface EmailData {
   requestId: number;

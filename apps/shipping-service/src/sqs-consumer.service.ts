@@ -1,6 +1,6 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
 import { SQS } from 'aws-sdk';
-import { EventType, SQS_CONFIG, AWS_CONFIG } from '@chargeflow/shared';
+import { EventType, SQS_CONFIG, AWS_CONFIG } from '@shopflow/shared';
 import { ShippingService } from './shipping.service';
 
 @Injectable()

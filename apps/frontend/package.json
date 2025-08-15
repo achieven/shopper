@@ -1,7 +1,7 @@
 {
-  "name": "@chargeflow/frontend",
+  "name": "@shopflow/frontend",
   "version": "1.0.0",
-  "description": "Frontend application for ChargeFlow Shopper",
+  "description": "Frontend application for ShopFlow Shopper",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

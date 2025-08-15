@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import axios from 'axios';
-import { SHIPPING_CONFIG } from '@chargeflow/shared';
+import { SHIPPING_CONFIG } from '@shopflow/shared';
 
 export interface ShippingOrder {
   trackingId: string;

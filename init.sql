@@ -1,4 +1,4 @@
--- Initialize database schema for ChargeFlow Shopper
+-- Initialize database schema for ShopFlow Shopper
 
 -- Users table
 CREATE TABLE users (

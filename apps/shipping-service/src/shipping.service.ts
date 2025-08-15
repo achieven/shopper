@@ -7,7 +7,7 @@ import { RequestItem } from './entities/request-item.entity';
 import { User } from './entities/user.entity';
 import { Product } from './entities/product.entity';
 import { OutboxMessage } from './entities/outbox-message.entity';
-import { EventType, RequestStatus, SQS_CONFIG, AWS_CONFIG } from '@chargeflow/shared';
+import { EventType, RequestStatus, SQS_CONFIG, AWS_CONFIG } from '@shopflow/shared';
 import { ShippingPartnerService } from './shipping-partner.service';
 
 @Injectable()
