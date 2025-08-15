@@ -1,9 +1,9 @@
 export const DATABASE_CONFIG = {
   host: process.env.DB_HOST || 'localhost',
   port: parseInt(process.env.DB_PORT || '5432'),
-  username: process.env.DB_USERNAME || 'chargeflow',
-  password: process.env.DB_PASSWORD || 'chargeflow123',
-  database: process.env.DB_NAME || 'chargeflow',
+  username: process.env.DB_USERNAME || 'db_user',
+  password: process.env.DB_PASSWORD || 'db_password',
+  database: process.env.DB_NAME || 'db_name',
 };
 
 export const REDIS_CONFIG = {

@@ -1,18 +1,18 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, DataSource } from 'typeorm';
-import { InjectAwsService } from '@nestjs/aws-sdk';
 import { SQS } from 'aws-sdk';
 import { Request } from './entities/request.entity';
 import { RequestItem } from './entities/request-item.entity';
 import { User } from './entities/user.entity';
 import { OutboxMessage } from './entities/outbox-message.entity';
-import { EventType, RequestStatus } from '@chargeflow/shared';
-import { SQS_CONFIG } from '@chargeflow/shared';
+import { EventType, RequestStatus, SQS_CONFIG, AWS_CONFIG } from '@chargeflow/shared';
 import { StripeService } from './stripe.service';
 
 @Injectable()
 export class BillingService {
+  private readonly sqs: SQS;
+
   constructor(
     @InjectRepository(Request)
     private readonly requestRepository: Repository<Request>,
@@ -22,11 +22,18 @@ export class BillingService {
     private readonly userRepository: Repository<User>,
     @InjectRepository(OutboxMessage)
     private readonly outboxRepository: Repository<OutboxMessage>,
-    @InjectAwsService(SQS)
-    private readonly sqs: SQS,
     private readonly stripeService: StripeService,
     private readonly dataSource: DataSource,
-  ) {}
+  ) {
+    this.sqs = new SQS({
+      region: AWS_CONFIG.region,
+      endpoint: AWS_CONFIG.endpoint,
+      credentials: {
+        accessKeyId: AWS_CONFIG.accessKeyId || 'test',
+        secretAccessKey: AWS_CONFIG.secretAccessKey || 'test',
+      },
+    });
+  }
 
   async processPayment(requestId: number): Promise<void> {
     const queryRunner = this.dataSource.createQueryRunner();

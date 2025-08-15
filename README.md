@@ -108,9 +108,9 @@ Create `.env` files in each service directory:
 # Database
 DB_HOST=localhost
 DB_PORT=5432
-DB_USERNAME=chargeflow
-DB_PASSWORD=chargeflow123
-DB_NAME=chargeflow
+DB_USERNAME=db_user
+DB_PASSWORD=db_password
+DB_NAME=db_name
 
 # Redis
 REDIS_HOST=localhost

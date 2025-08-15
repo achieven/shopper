@@ -1,15 +1,21 @@
 import { Injectable } from '@nestjs/common';
-import { InjectAwsService } from '@nestjs/aws-sdk';
 import { SQS } from 'aws-sdk';
-import { Event, EventType } from '@chargeflow/shared';
-import { SQS_CONFIG } from '@chargeflow/shared';
+import { Event, EventType, SQS_CONFIG, AWS_CONFIG, RequestStatus } from '@chargeflow/shared';
 
 @Injectable()
 export class MessageBrokerService {
-  constructor(
-    @InjectAwsService(SQS)
-    private readonly sqs: SQS,
-  ) {}
+  private readonly sqs: SQS;
+
+  constructor() {
+    this.sqs = new SQS({
+      region: AWS_CONFIG.region,
+      endpoint: AWS_CONFIG.endpoint,
+      credentials: {
+        accessKeyId: AWS_CONFIG.accessKeyId || 'test',
+        secretAccessKey: AWS_CONFIG.secretAccessKey || 'test',
+      },
+    });
+  }
 
   async publishEvent(event: Event): Promise<void> {
     const params: SQS.SendMessageRequest = {
@@ -77,7 +83,7 @@ export class MessageBrokerService {
     });
   }
 
-  async publishOrderCompleted(requestId: number, status: string): Promise<void> {
+  async publishOrderCompleted(requestId: number, status: RequestStatus): Promise<void> {
     await this.publishEvent({
       eventType: EventType.ORDER_COMPLETED,
       requestId,

@@ -22,8 +22,6 @@
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/config": "^3.0.0",
     "@nestjs/typeorm": "^10.0.0",
-    "@nestjs/redis": "^10.0.0",
-    "@nestjs/aws-sdk": "^3.0.0",
     "@chargeflow/shared": "1.0.0",
     "typeorm": "^0.3.17",
     "pg": "^8.11.0",
@@ -56,7 +54,6 @@
     "ts-jest": "^29.1.0",
     "ts-loader": "^9.4.3",
     "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.1",
     "typescript": "^5.1.3"
   },
   "jest": {

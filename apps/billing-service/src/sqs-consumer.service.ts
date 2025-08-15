@@ -1,17 +1,24 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
-import { InjectAwsService } from '@nestjs/aws-sdk';
 import { SQS } from 'aws-sdk';
-import { EventType } from '@chargeflow/shared';
-import { SQS_CONFIG } from '@chargeflow/shared';
+import { EventType, SQS_CONFIG, AWS_CONFIG } from '@chargeflow/shared';
 import { BillingService } from './billing.service';
 
 @Injectable()
 export class SqsConsumerService implements OnModuleInit {
+  private readonly sqs: SQS;
+
   constructor(
-    @InjectAwsService(SQS)
-    private readonly sqs: SQS,
     private readonly billingService: BillingService,
-  ) {}
+  ) {
+    this.sqs = new SQS({
+      region: AWS_CONFIG.region,
+      endpoint: AWS_CONFIG.endpoint,
+      credentials: {
+        accessKeyId: AWS_CONFIG.accessKeyId || 'test',
+        secretAccessKey: AWS_CONFIG.secretAccessKey || 'test',
+      },
+    });
+  }
 
   async onModuleInit() {
     await this.startPolling();
