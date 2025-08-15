@@ -75,10 +75,6 @@ npm run dev
 This will start:
 - Frontend: http://localhost:3000
 - Web Server: http://localhost:3001
-- Invoice Service: http://localhost:3002
-- Billing Service: http://localhost:3003
-- Shipping Service: http://localhost:3004
-- Email Service: http://localhost:3005
 
 ## 📁 Project Structure
 
